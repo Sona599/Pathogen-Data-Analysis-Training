@@ -32,11 +32,12 @@ In this session, we will clean and process .csv files including
 We will be using the here() package which relates all file paths to the directory in which this script is stored. This makes it easier for people to collaborate across computers, as long as the folder structure is the same. We recommend storing all data on the cloud (Box or Drive) and using the desktop Box/Drive app to be able to directly access your Box/Drive folders from your local computer. For this workshop, you will be utilizing the folder on your desktop that you created with the forked GitHub repository.   
 ```{r read.dat}
 ~#Test
-  test<-read_csv(/GitHub/Pathogen-Data-Analysis-Training/simulated_data/survey_data_simulated.csv)
+#  test<-read_csv(/GitHub/Pathogen-Data-Analysis-Training/simulated_data/survey_data_simulated.csv)
 
 # Read microbiological data
 # (there are also packages you can install and load, like read_xl(), for reading .xlsx files)
-microbio_df <- read_csv(/GitHub/Pathogen-Data-Analysis-Training/simulated_data/survey_data_simulated.csv("simulated_data", "microbial_data_simulated.csv"))
+  
+microbio_df <- read_csv(here("simulated_data", "microbial_data_simulated.csv"))
 
 # Folder path for TAC .csvs
 tac_folder <- here("simulated_data", "simulated_cards")
